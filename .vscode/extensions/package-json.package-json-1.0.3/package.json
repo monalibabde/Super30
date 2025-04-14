@@ -1,0 +1,76 @@
+{
+	"name": "package-json",
+	"displayName": "package-json",
+	"description": "这是一个快捷执行package.json命令的 vs code 扩展, 搭配Vue,React等体验更佳 ~",
+	"version": "1.0.3",
+	"publisher": "package-json",
+	"keywords": [
+		"package",
+		"npm",
+		"vscode",
+		"scripts"
+	],
+	"icon": "img/icon.png",
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:package.json"
+	],
+	"main": "./extension",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "package",
+					"title": "package-json",
+					"icon": "img/icon.svg"
+				}
+			]
+		},
+		"views": {
+			"package": [
+				{
+					"id": "packageScript",
+					"name": "scripts"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^7.0.43",
+		"eslint": "^4.11.0",
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6"
+	},
+	"dependencies": {
+		"fs-extra": "^8.1.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chenzejiang/vscode-package-json"
+	},
+	"__npminstall_done": false,
+	"__metadata": {
+		"id": "1d6402a3-e276-44a7-a6bc-303dacf9c895",
+		"publisherId": "3eda13bc-3562-4730-a4b4-0ee9a1ddca97",
+		"publisherDisplayName": "webJ",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1720897652727,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 424473
+	}
+}
